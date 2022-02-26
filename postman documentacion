@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "b1053f4a-9763-4209-a294-d0cf59af5c5f",
+		"name": "ServiciosPersonas",
+		"description": "A continuación están los servicios presentes en la API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPersonas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persona/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						""
+					]
+				},
+				"description": "Servicio que retorna todas las personas de la base de datos."
+			},
+			"response": []
+		},
+		{
+			"name": "savePersona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Gonzalez\",\r\n    \"fechaNacimiento\": \"2/02/02\",\r\n    \"sexo\": \"Masculino\",\r\n    \"dni\": 2020202\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persona/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						""
+					]
+				},
+				"description": "Servicio para insertar una persona en la base de datos."
+			},
+			"response": []
+		},
+		{
+			"name": "patchPersona",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sexo\": \"Femenino\",\r\n    \"apellido\": \"Martínez Rivero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persona/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"3"
+					]
+				},
+				"description": "Servicio para realizar cambios en las entradas de una persona en la base de datos, sin alterar el resto de las entradas."
+			},
+			"response": []
+		},
+		{
+			"name": "deletePersona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persona/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"5"
+					]
+				},
+				"description": "Servicio para eliminar una persona de la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "getPersonaById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Servicio para encontrar una persona por su ID."
+			},
+			"response": []
+		}
+	]
+}
